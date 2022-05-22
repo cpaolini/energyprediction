@@ -1,0 +1,16 @@
+[Unit]
+Description=My service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u MasterLCD.py
+WorkingDirectory=/home/pi/Documents/MLR_final 
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+RestartSec=1s
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+
